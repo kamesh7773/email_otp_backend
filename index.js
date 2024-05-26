@@ -9,5 +9,5 @@ app.use("/",require("./routes/app.routes"));
 
 app.get("/", (req, res) => res.send("Email OTP server running successfully ✅"));
 app.listen(4500, function(){
-    console.log("server Started");
+    console.log("server Started successfully ✅");
 });
