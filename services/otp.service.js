@@ -1,6 +1,7 @@
 const otpGenerrator = require('otp-generator');
 const crypto = require('crypto');
-const key = "test123";
+
+const key = "EfGwOPExvP";
 const emailServices = require('./emailer.service');
 
 // Method for genrating the OTP
@@ -24,7 +25,7 @@ async function sendOtp(params , callback){
     // This the Email OTP template that is send to user if possible then in otpMessage we can send HTMl code also.
     var model = {
         email : params.email,
-        subject : "Registration OTP",
+        subject : "Email OTP for varification",
         // In body we can pass our custom template
         body: `<!DOCTYPE html>
         <html lang="en">

@@ -2,17 +2,18 @@ var nodemailer = require('nodemailer');
 
 async function sendEmail(params, callback){
     const transporter = nodemailer.createTransport({
-        service:"gmail",
-        host: 'smtp.gmail.com',
-        port: 587,
+        service: "gmail",
         auth: {
             user: 'laxmansinghaaa64@gmail.com',
-            pass: 'laxman123#$&'
+            pass: 'lhmgughohoisdqfd'
         }
     });
 
     var mailOptions = {
-        from: "kameshsinghaaa64@gmail.com",
+        from :{
+            name:"Registration OTP",
+            address:"verify@marfa.io",
+        },
         to: params.email,
         subject: params.subject,
         html: params.body,
