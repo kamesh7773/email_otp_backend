@@ -5,9 +5,9 @@ const cors = require('cors');
 app.use(cors({origin: '*'}));
 
 app.use(express.json());
-app.use("/api",require("./routes/app.routes"));
+app.use("/",require("./routes/app.routes"));
 
-app.get("/", (req, res) => res.send("Hello World!"));
+app.get("/", (req, res) => res.send("Email OTP server running successfully ✅"));
 app.listen(4500, function(){
     console.log("server Started");
 });
