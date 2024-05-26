@@ -5,8 +5,8 @@ async function sendEmail(params, callback){
         host: 'smtp.ethereal.email',
         port: 587,
         auth: {
-            user: 'daniella.fay58@ethereal.email',
-            pass: 'kTWDqb9XP9bzAWwy7j'
+            user: 'laxmansinghaaa64@gmail.com',
+            pass: 'laxman123#$&'
         }
     });
 
