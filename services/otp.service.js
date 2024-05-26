@@ -1,7 +1,7 @@
 const otpGenerrator = require('otp-generator');
 const crypto = require('crypto');
 const key = "test123";
-const emailServices = require('../services/emailer.service');
+const emailServices = require('./emailer.service');
 
 // Method for genrating the OTP
 async function sendOtp(params , callback){
