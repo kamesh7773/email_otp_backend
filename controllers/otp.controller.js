@@ -9,7 +9,7 @@ exports.otpLogin = (req, res, next) => {
       });
     }
     return res.status(200).send({
-      message: "Success",
+      message: "Email Send ✅",
       data: results,
     });
   });
@@ -24,7 +24,7 @@ exports.verifyOTP = (req, res, next) => {
       });
     }
     return res.status(200).send({
-      message: "Success",
+      message: "OTP Verified ✅",
       data: results,
     });
   });
