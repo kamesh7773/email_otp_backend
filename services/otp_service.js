@@ -1,11 +1,11 @@
 const otpGenerrator = require("otp-generator");
 const crypto = require("crypto");
 var nodemailer = require("nodemailer");
-// for custom template
 const path = require("path");
 var hbs = require("nodemailer-express-handlebars");
+require('dotenv').config();
 
-const key = "EfGwOPExvP";
+const key = process.env.key;
 var otp;
 
 // Method for genrating the OTP
@@ -58,8 +58,8 @@ async function sendEmail(params, callback) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "laxmansinghaaa64@gmail.com",
-      pass: "lhmgughohoisdqfd",
+      user: process.env.email,
+      pass: process.env.password,
     },
   });
 
