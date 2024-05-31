@@ -61,6 +61,7 @@ async function sendEmail(params, callback) {
       user: process.env.email,
       pass: process.env.password,
     },
+    from: process.env.email,
   });
 
   // used to send custom HTML Template
@@ -80,10 +81,11 @@ async function sendEmail(params, callback) {
   var mailOptions = {
     from: {
       name: "Registration OTP",
-      address: "verify@marfa.io",
+      address: process.env.email,
     },
     to: params.email,
     subject: params.subject,
+    text: "Email OTP for varification",
     template: "index", // HTML Template Name
     context: {
       otp: otp, // OTP variable passing to HTML Template
